@@ -6,9 +6,7 @@ import express from 'express';
 import cors from 'cors';
 
 // Import product routes.
-import productRoute from "./src/routes/product.route";
-import categoryRoute from "./src/routes/category.route";
-import userRoute from "./src/routes/user.route";
+import purRoute from "./src/routes/pur.route";
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -19,12 +17,8 @@ app.get('/', (req, res) => {
     res.json({'message': 'ok'});
 })
 
-app.use('/product', productRoute);
-
-app.use('/category', categoryRoute);
-
-app.use('/user', userRoute);
-
+app.use('/img',express.static(`${__dirname}/public/img`))
+app.use('/pur', purRoute);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
