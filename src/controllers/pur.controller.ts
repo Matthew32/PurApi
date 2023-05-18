@@ -7,7 +7,7 @@ export default class PurController implements BaseController {
     async get(req, res, next) {
         try {
             const urlPath = await productRepository.getCatFile();
-            res.json([{url: `${req.protocol}://${req.get('host')}/img/${urlPath}`}]);
+            res.json([{url: `${process.env.PROTOCOL}://${req.get('host')}/img/${urlPath}`}]);
         } catch (err) {
             console.error(err.message);
             next(err);
