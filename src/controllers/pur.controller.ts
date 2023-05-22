@@ -20,7 +20,7 @@ export default class PurController implements BaseController {
                 do{
                     urlPath = await this.getAnimalUrl(hostUrl);
                     repeatedNumber++;
-                }while(showedAnimals && showedAnimals.includes(urlPath) && repeatedNumber < 3)
+                }while(showedAnimals.includes(urlPath) && repeatedNumber < 3)
             }
             
             if(showedAnimals.length > 20){
