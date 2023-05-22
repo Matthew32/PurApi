@@ -20,6 +20,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.5",
     "mysql2": "^3.2.0",
+    "node-cache": "^5.1.2",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.29.0",
     "sqlite3": "^5.1.4",

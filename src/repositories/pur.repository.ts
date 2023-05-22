@@ -1,5 +1,4 @@
-import db from "../../db/index"
-
+import db from "../../db/index";
 
 export default class PurRepository{
     constructor(protected purModel = null){
