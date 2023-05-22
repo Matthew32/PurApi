@@ -23,7 +23,7 @@ export default class PurController implements BaseController {
                 }while(showedAnimals && showedAnimals.includes(urlPath) && repeatedNumber < 3)
             }
             
-            if(showedAnimals.length > 10){
+            if(showedAnimals.length > 20){
                 nodeCache.delete(cacheKey);
                 showedAnimals = [];
             }
